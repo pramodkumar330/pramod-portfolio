@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dr. Peyyala Pramod Kumar – Academic Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #0f172a;
+      padding: 20px;
+    }
+
+    a {
+      color: #0f766e;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      background: #f8fafc;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.4);
+      padding: 24px;
+      border: 1px solid #cbd5f5;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      background: radial-gradient(circle at top left, #e0f2fe, #f8fafc 55%);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #0f766e;
+      flex-shrink: 0;
+      background: #e2e8f0;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro {
+      flex: 1;
+      min-width: 230px;
+    }
+
+    .intro h1 {
+      font-size: 28px;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .intro h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+
+    .intro p {
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #1f2933;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .contact-line {
+      font-size: 13px;
+      color: #334155;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0f766e;
+      color: #f9fafb;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+
+    /* Tabs */
+    .tab {
+      overflow: hidden;
+      border-bottom: 2px solid #e2e8f0;
+      margin-top: 10px;
+      background: #0f172a;
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    .tab button {
+      background-color: transparent;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 8px 16px;
+      transition: 0.3s;
+      font-size: 13px;
+      color: #e5e7eb;
+      border-radius: 999px;
+      margin: 2px;
+      white-space: nowrap;
+    }
+
+    .tab button:hover {
+      background-color: #1f2937;
+    }
+
+    .tab button.active {
+      background-color: #0f766e;
+      color: #e5e7eb;
+      font-weight: 600;
+      box-shadow: 0 0 0 1px #a7f3d0;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 18px 6px;
+      border-top: none;
+      font-size: 14px;
+    }
+
+    h3.section-title {
+      font-size: 18px;
+      color: #0f172a;
+      margin-bottom: 10px;
+      border-left: 4px solid #0f766e;
+      padding-left: 8px;
+    }
+
+    .item {
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      border-left: 3px solid #cbd5f5;
+    }
+
+    .item-title {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .item-sub {
+      font-style: italic;
+      color: #4b5563;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0f172a;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      margin: 2px 4px 2px 0;
+    }
+
+    @media (max-width: 800px) {
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .tab {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- HEADER / HOME -->
+  <header>
+    <div class="profile-photo">
+      <!-- Replace photo.jpg with your actual photo file name -->
+      <img src="photo.jpg" alt="Profile Photo">
+    </div>
+    <div class="intro">
+      <h1>Dr. Peyyala Pramod Kumar</h1>
+      <h2>IQAC Coordinator & Associate Professor (Mechanical Engineering)</h2>
+
+      <p><span class="label">Career Objective:</span>
+        Dynamic and results-driven educational leader, committed to using exceptional administrative expertise,
+        strategic vision, and a collaborative approach to foster academic excellence, empower staff,
+        and drive institutional success.
+      </p>
+
+      <p><span class="label">Highest Qualification:</span>
+        Ph.D. in Mechanical Engineering, JNTUK Kakinada (2021).
+      </p>
+
+      <p><span class="label">Present Organization:</span>
+        MLR Institute of Technology (Autonomous), Hyderabad.
+      </p>
+
+      <p class="contact-line">
+        <span class="label">Email:</span> pramod.330@gmail.com&nbsp;&nbsp;|
+        <span class="label">Mobile:</span> 8074157601
+      </p>
+
+      <div>
+        <span class="badge">IQAC Coordinator</span>
+        <span class="badge">NBA / NAAC / Autonomous</span>
+        <span class="badge">Certified Scrum Master(CSM)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN TABS -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Education')" id="defaultOpen">Education</button>
+    <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+    <button class="tablinks" onclick="openTab(event, 'Teaching')" >Teaching & Training</button>
+    <button class="tablinks" onclick="openTab(event, 'Memberships')">Memberships</button>
+    <button class="tablinks" onclick="openTab(event, 'Admin')">Admin Roles</button>
+    <button class="tablinks" onclick="openTab(event, 'Patents')">Patents</button>
+    <button class="tablinks" onclick="openTab(event, 'NPTEL')">NPTEL Courses</button>
+    <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+    <button class="tablinks" onclick="openTab(event, 'Conferences')">Conferences</button>
+    <button class="tablinks" onclick="openTab(event, 'FDPOrg')">FDPs Organized</button>
+    <button class="tablinks" onclick="openTab(event, 'FDPAtt')">FDPs Attended</button>
+    
+    <button class="tablinks" onclick="openTab(event, 'Personal')">Personal</button>
+  </div>
+
+  <!-- EDUCATION -->
+  <div id="Education" class="tabcontent">
+    <h3 class="section-title">Educational Qualifications</h3>
+
+    <div class="item">
+      <div class="item-title">Ph.D. in Mechanical Engineering</div>
+      <div class="item-sub">Jawaharlal Nehru Technological University Kakinada (JNTUK), Kakinada – 2021</div>
+      <ul>
+        <li>Thesis: “Analysis of Carbon Nanotube Reinforced Polymer Composites using First Order Shear Deformation Theory”.</li>
+        <li>Supervisor: Dr. V. V. Subbarao, Vice-Chancellor, Jawaharlal Nehru Technological University, Vizianagaram.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">M.Tech (CAD/CAM)</div>
+      <div class="item-sub">JNTU College of Engineering, Kakinada – 2008</div>
+      <ul>
+        <li>Percentage: 62.5%.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">B.Tech in Mechanical Engineering</div>
+      <div class="item-sub">BVC Engineering College, Amalapuram – 2002</div>
+      <ul>
+        <li>Percentage: 58.5%.</li>
+      </ul>
+    </div>
+
+    <div class="two-column">
+      <div class="item">
+        <div class="item-title">Intermediate</div>
+        <div class="item-sub">P. R. Govt. Junior College, Kakinada – 1998</div>
+        <ul>
+          <li>Percentage: 75.3%.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-title">SSC</div>
+        <div class="item-sub">ARC & GVR Govt. Boys High School, Singarayakonda – 1996</div>
+        <ul>
+          <li>Percentage: 79.3%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="Experience" class="tabcontent">
+    <h3 class="section-title">Professional Experience</h3>
+
+    <div class="item">
+      <div class="item-title">IQAC Coordinator & Associate Professor (Ratified)</div>
+      <div class="item-sub">MLR Institute of Technology (Autonomous), Hyderabad | July 2021 – Till Date</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Assistant Professor</div>
+      <div class="item-sub">KG Reddy College of Engineering & Technology (KGRCET), Hyderabad | Jan 2019 – Dec 2019</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Associate Professor & Head of Department (Mechanical)</div>
+      <div class="item-sub">Narsimha Reddy Engineering College (NRCM), Hyderabad | Oct 2016 – Nov 2017</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Associate Professor</div>
+      <div class="item-sub">Malla Reddy Engineering College (Autonomous) [MREC(A)], Hyderabad | July 2013 – June 2016</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Associate Professor & Head of Department (Mechanical)</div>
+      <div class="item-sub">Turbomachinery Institute of Science & Technology (TIST), Hyderabad | July 2009 – June 2013</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Assistant Professor</div>
+      <div class="item-sub">TRR College of Engineering (TRRCE), Hyderabad | Sept 2006 – June 2009</div>
+    </div>
+  </div>
+
+  <!-- TEACHING & TRAINING -->
+  <div id="Teaching" class="tabcontent">
+    <h3 class="section-title">Subjects Taught & Training</h3>
+
+    <div class="item">
+      <div class="item-title">Core Subjects Taught</div>
+      <ul>
+        <li>Engineering Mechanics (14 times).</li>
+        <li>Mechanics of Solids (12 times).</li>
+        <li>Mechanics of Fluids and Hydraulic Machines (8 times).</li>
+        <li>Mechanics of Composites (3 times).</li>
+        <li>CAD/CAM (4 times).</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Training / Coordination Highlights</div>
+      <ul>
+        <li>Faculty Advisor for team securing National Level Second Prize in Reverse Engineering Competition organized by SAE India Southern Section.</li>
+        <li>Faculty Advisor for student team in Drone Design Challenge‑2026 conducted by SAE India Southern Section.</li>
+        <li>Completed Teacher Training Program (TTP‑5) on OBE at IIIT‑Hyderabad under STEP.</li>
+        <li>Coordinated “Quality Enhancement in Engineering Education (QEEE)” by IIT‑Madras at MREC(A), 2014–2016.</li>
+        <li>Coordinated 5 International Conferences and 4 National Conferences.</li>
+        <li>Organized 6 Faculty Development Programs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ADMIN ROLES -->
+  <div id="Admin" class="tabcontent">
+    <h3 class="section-title">Administrative Responsibilities</h3>
+
+    <div class="item">
+      <div class="item-title">Institutional and Accreditation Roles</div>
+      <ul>
+        <li>Core member of the four‑member committee that prepared the Detailed Project Report (DPR) for Deemed‑to‑be University application at MLR Institute of Technology.</li>
+        <li>Coordinator, IQAC at MLRIT.</li>
+        <li>NAAC Criteria IV and NBA Criteria V in‑charge at MLRIT.</li>
+        <li>Led NBA work at NRCM as HOD Mechanical.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Department & Examination Responsibilities</div>
+      <ul>
+        <li>Headed the Department of Mechanical Engineering at TIST (3 years) and NRCM (2 years).</li>
+        <li>Key role in NBA, NAAC, and Autonomous work at MREC(A).</li>
+        <li>Established Engineering Mechanics Lab at MREC(A).</li>
+        <li>Established MOS, MMS, PT, Thermal Engineering, and CAD/CAM Labs at TIST.</li>
+        <li>Officer in‑charge Examinations at TRRCE.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PATENTS -->
+  <div id="Patents" class="tabcontent">
+    <h3 class="section-title">Patents</h3>
+
+    <div class="item">
+      <ul>
+        <li>A smart natural fiber composite with self‑healing capabilities and method thereof, 07/2025, 14/02/2025, Page 16677.</li>
+        <li>Natural Fiber Bio‑composites for 3D and 4D Printing Application, 41/2023, 13/10/2023, Page 70571.</li>
+        <li>Semi‑Automatic Floor Cleaner – Design Patent 398505‑001, 26/10/2023, 11/01/2024.</li>
+        <li>Development of a supervisory system for telemetry of a fluid pump using Arduino and express‑PCB, 39/2022, 30/09/2022, Page 62393.</li>
+        <li>Development of supporting kit for CORONA free air‑conditioning system, 24/2022, 17/06/2022, Page 37124.</li>
+        <li>Fixture for Welding Thin Foil via Gas Tungsten Arc Welding, 05/2022, 04/02/2022, Page 5977.</li>
+        <li>Lanthana‑Doped Partially Stabilised Zirconia Thermal Barrier Ceramic Coating for Marine Diesel Engine, 04/2022, 28/01/2022, Page 4455.</li>
+        <li>A SMART COLOR WRITING TOOL FOR INTERACTIVE BOARDS, 16/2017, 21/04/2017, Page 10909.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NPTEL -->
+  <div id="NPTEL" class="tabcontent">
+    <h3 class="section-title">NPTEL / Online Courses</h3>
+
+    <div class="item">
+      <ul>
+        <li>“Introduction to Industry 4.0 and Industrial Internet of Things” – 76%, Jan–Apr 2025.</li>
+        <li>“Database Management System” – 47%, Jan–Apr 2025.</li>
+        <li>“Python for Data Science” – 65%, Jan–Feb 2023.</li>
+        <li>“Computer Integrated Manufacturing” – 70%, Jan–Apr 2022.</li>
+        <li>“Accreditation and Outcome Based Learning” – 63%, Aug–Oct 2022.</li>
+        <li>“NBA Accreditation and Teaching–Learning in Engineering (NATE)” – 70%, Jan–Apr 2020.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div id="Publications" class="tabcontent">
+    <h3 class="section-title">International Journal Publications</h3>
+
+    <div class="item">
+      <ul>
+        <li>M. Balaji, K. Dilip Kumar, Kiran A. Dongre, Ajay Veludurthi, R. Sethuraman, Peyyala Pramod Kumar, Baddepudi Malathi, G. Nixon Samuel Vijayakumar, Zakir Hussain, “Polymer–Gel Composite Phase Change Materials: A Functional Polymer Composite Approach for Solar‑Thermal Energy Storage in Building Facades,” Journal of Polymer and Composites, 2025, Vol. 13, Issue 06, p. 36. (Web of Science Indexed)</li>
+        <li>Rajan Singh, P. Pramod Kumar, K. Aravind, Radhika Devi V, “Teaching and Research – How the Duo are not Mutually Exclusive,” Journal of Engineering Education Transformations, 2024, 37(Special Issue 2), pp. 726–731. (Scopus Indexed)</li>
+        <li>Akshay Jain et al., including Pramod Kumar Peyyala, “Impact of titanium dioxide (TiO2) nanoparticles addition in Eichhornia Crassipes biodiesel used to fuel compression ignition engine at variable injection pressure,” Case Studies in Thermal Engineering, Vol. 49, Sept 2023, 103295. (SCIE Indexed)</li>
+        <li>P. Pramod Kumar, V. V. Subbarao, “An analytical study on buckling behavior of CNT/polymer composite plates using first order shear deformation theory,” Journal of Theoretical and Applied Mechanics, Vol. 56, No. 1, pp. 71–79, 2018. (SCIE)</li>
+        <li>P. Pramod Kumar, V. V. Subbarao, “First Order Shear Deformation Theory access for the stress research of CNT/Polymer Laminated Composite Plate,” International Journal of Engineering and Advanced Technology, Vol. 8, Issue 6, Aug 2019. (Scopus Indexed)</li>
+        <li>P. Pramod Kumar, V. V. Subbarao, “An Analytical Investigation of Deflection Behavior of CNT Reinforced Composite Plates under First‑Order Shear Deformation Theory,” Journal of Advanced Research in Dynamical and Control Systems, Vol. 11, Issue 1, 2019. (Scopus Indexed)</li>
+        <li>P. Pramod Kumar, S. Madhu, V. V. Subbarao, “Correlation of CLPT and FSDT responses in CNT/Polymer composite beams under deflection and buckling,” International Journal of Recent Technology and Engineering, Vol. 8, Issue 2, July 2019. (Scopus Indexed)</li>
+        <li>P. Pramod Kumar, Madhu Salumari, V. V. Subba Rao, “A First Order Shear Deformation Theory Approach for the Buckling Behavior of Nanocomposite Beams,” International Journal of Aerospace and Mechanical Engineering, Vol. 11, No. 5, 2017.</li>
+        <li>B. Malathi, P. Pramod Kumar, “Experimental Investigation for Evaluation of Mechanical Properties of Rice Husk and Saw Dust Composites,” International Journal of Trend in Research and Development, Vol. 5, Issue 6, pp. 6–10, Dec 2018.</li>
+        <li>Pramod Kumar Peyyala et al., “Energy Management and Cost Saving Opportunities for the Pharmaceutical Company,” NeuroQuantology, Vol. 20, Issue 12, pp. 2378–2387, 2022. (Scopus Indexed)</li>
+        <li>Gottipati Venkata Rambabu et al., including Pramod Kumar Peyyala, “Experimental investigation on enhancement of mechanical properties by coating ceramic material on Al7075 Alloy,” NeuroQuantology, Vol. 20, Issue 12, pp. 2911–2915, 2022. (Scopus Indexed)</li>
+        <li>P. Srikanth, P. Pramod Kumar, “Structural Analysis of Isotropic and Orthotropic Beams and Plates in First Order Shear Deformation Theory,” International Journal of Innovative Research in Science, Engineering and Technology, Vol. 5, Issue 2, pp. 2256–2266.</li>
+        <li>Satish, P. Pramod Kumar, “Investigation of Geometry under Different Lubrication Conditions in Cold Upset Forging of Solid Aluminium Rings,” International Journal of Innovative Research in Science, Engineering and Technology, Vol. 4, Issue 9, pp. 8653–8659.</li>
+        <li>S. Madhu, V. V. Subbarao, P. Pramod Kumar, “Buckling Analysis of Carbon Nanotube Reinforced Polymer Composite Plates,” International Journal of Research in Mechanical Engineering and Technology, Vol. 3, Issue 2, pp. 51–54.</li>
+        <li>S. Madhu, V. V. Subbarao, P. Pramod Kumar, K. Chandra Mouli, “Deflection and vibration analysis of carbon nanotube reinforced polymer composite plates,” Material Science Research Journal, Vol. 6, Issue 3–4, Nova Publications.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONFERENCES -->
+  <div id="Conferences" class="tabcontent">
+    <h3 class="section-title">International Conferences</h3>
+
+    <div class="item">
+      <ul>
+        <li>ICASMMT 2024, Hyderabad – “Analysis of mechanical characteristics and wear resistance of epoxy‑based nanocomposites with Al2O3 fillers,” AIP Conf. Proc. 3342, 070015 (2025), Scopus Indexed.</li>
+        <li>ICASMMT 2024, Hyderabad – “Experimental investigation on the tensile properties of natural fiber reinforced polymer composite,” AIP Conf. Proc. 3342, 070016 (2025), Scopus Indexed.</li>
+        <li>ICMSA‑24, Ariyalur – “Nanotechnology in environmental remediation: Challenges and solutions,” AIP Conf. Proc. 3300, 020007 (2025), Scopus Indexed.</li>
+        <li>ICAMM 2024 – “Development of Regression model and Optimization of Process Parameters for Wire Electrical Discharge of SAE 1010 Steel using Taguchi Grey Approach,” Journal of Physics: Conference Series 2837 (2024) 012084, Scopus Indexed.</li>
+        <li>ICAMM 2024 – “Application of Taguchi‑Grey approach for wire electro discharge machining of aluminium alloy,” Journal of Physics: Conference Series 2837 (2024) 012085, Scopus Indexed.</li>
+        <li>ICAMM 2024 – “Exploration into assessing the mechanical characteristics of PETG pieces through the use of 3D printed material element tribology,” Journal of Physics: Conference Series 2837 (2024) 012089, Scopus Indexed.</li>
+        <li>ADMMS‑2022, Chennai – “Experimental Investigation of Mechanical Characterisation of Sugar‑cane Bagasse & Sapodilla Seed Shell Powder Reinforced Polymer Composite,” SAE Technical Paper 2022‑28‑0587, Scopus Indexed.</li>
+        <li>ICAAMM‑2021, Hyderabad – “Analysis of Gas Turbine Blade Using Finite Element Method,” AIP Conf. Proc. 2492, 020037 (2023), Scopus Indexed.</li>
+        <li>ICAAMM‑2021, Hyderabad – “Design and Analysis of a Typical Wing Rib for Passenger Aircraft,” AIP Conf. Proc. 2492, 020039 (2023), Scopus Indexed.</li>
+        <li>ICAAMM‑2021, Hyderabad – “An Analytical Investigation on Effect of Nanofluids on Flow Parameters in an Automobile Radiator,” AIP Conf. Proc. 2492, 020069 (2023), Scopus Indexed.</li>
+        <li>ICAAMM‑2021, Hyderabad – “Design and Development of a 3D Printer and machine prototyping CNC Milling machine Operation,” AIP Conf. Proc. 2492, 040037 (2023), Scopus Indexed.</li>
+        <li>ICAAMM‑2021, Hyderabad – “Solar Based Multipurpose Utility Vehicle for Agriculture Operations,” AIP Conf. Proc. 2492, 050013 (2023), Scopus Indexed.</li>
+        <li>ADMMS‑2018, Chennai – “An Analytical Study of Buckling Behavior of Nanocomposite Beams,” SAE Technical Paper series, 2018, Scopus Indexed.</li>
+        <li>ICMAEM‑2017, Hyderabad – “Deflection and Buckling behaviour of simply supported nanocomposite beams under FSDT approach,” IOP Mater. Sci. Eng. Vol. 225 (2017), Scopus Indexed.</li>
+        <li>ICAMM‑2016, Hyderabad – “Deflection Behavior of Carbon Nanotube Reinforced Polymer Composite Beams using First Order Shear Deformation Theory,” Materials Today: Proceedings, Vol. 5, Issue 13, 2018, pp. 26836–26842, Scopus Indexed.</li>
+        <li>ICIES‑2013, Vijayawada – “Structural suitability of carbon nanotube reinforced polymer composite plates under deflection and buckling,” Proceedings pp. 141–146.</li>
+      </ul>
+    </div>
+
+    <h3 class="section-title">National Conferences</h3>
+    <div class="item">
+      <ul>
+        <li>National Conference “Role of Civil & Mechanical Engineer in development of Society” (RCMS 2K13) – “Vibration and Buckling Behavior of CFRP Composite Rectangular Plates,” Proceedings pp. 68–73.</li>
+        <li>National Conference “Recent Advances in Science, Engineering and Management” (NCRASEM’13), 5 April 2013 – “Buckling Analysis of CFRP composite rectangular plates.”</li>
+        <li>National Conference “Recent Advances in Engineering and Management” (NCRAEM’12), 9–10 April 2012 – “Deflection Analysis of polymer composite beams,” pp. 149–153.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FDP ORGANIZED -->
+  <div id="FDPOrg" class="tabcontent">
+    <h3 class="section-title">FDPs / Workshops / Seminars Organized</h3>
+
+    <div class="item">
+      <ul>
+        <li>Co‑Coordinator for AICTE‑sponsored ATAL online FDP on “AI in Education: Tools and Trends in Teaching,” MLR Institute of Technology, 15–20 Sept 2025.</li>
+        <li>Organized three‑day workshop “Impactful Classroom,” MLR Institute of Technology, 17–19 July 2025.</li>
+        <li>Organized webinar “Enhancing Assessment Integrity: Best Practices for Quality Question Paper Design,” MLR Institute of Technology, 14 Dec 2024.</li>
+        <li>Organized four‑day Leadership Summit for HoDs “Transformative Leadership and Governance for Academic Excellence,” MLR Institute of Technology, 22–25 July 2024.</li>
+        <li>Organized one‑week FDP on “Engineering Graphics Using AutoCAD,” MLR Institute of Technology, 26–31 Oct 2022.</li>
+        <li>Organized one‑week FDP on “Engineering Mechanics Made Easy,” Narsimha Reddy Engineering College, 27 June – 02 July 2017.</li>
+        <li>Coordinated three‑day National Level FDP on “Research Trends and Issues in Mechanical Engineering,” MREC(A), 25–27 Feb 2016.</li>
+        <li>Coordinated two‑week ISTE workshop on “Engineering Thermodynamics” under IITB & MHRD at TIST, Dec 2012.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FDP ATTENDED -->
+  <div id="FDPAtt" class="tabcontent">
+    <h3 class="section-title">FDPs / Seminars / Workshops Attended</h3>
+
+    <div class="item">
+      <ul>
+        <li>ATAL FDP “Prompt Engineering for Educators: Bridging AI with Academia,” Gulzar Group of Institutions, 10–15 Nov 2025.</li>
+        <li>AICTE‑approved two‑week FDP on “Artificial Intelligence,” SkillDzire, 17–31 Mar 2025.</li>
+        <li>ATAL FDP “Emerging Technologies in Optimizing Renewable Energy Systems with Smart Materials and Storage Solutions,” UCEK, 20–25 Jan 2025.</li>
+        <li>FDP “AI Tools and Techniques for Research,” Dept. of Business Administration & IQAC, Andhra Loyola College, 9–13 Dec 2024.</li>
+        <li>Two‑week online FDP “Online NEP 2020 Orientation & Sensitization Programme,” Malaviya Mission Teacher Training Programme (MM‑TTP), Osmania University, 4–14 Mar 2024.</li>
+        <li>One‑week FDP “Leadership and Governance for Institutional Sustainability,” Geetanjali College of Engineering and Technology, 8–12 May 2023.</li>
+        <li>One‑week FDP “Unlocking Innovation: Exploring Research, Innovation and Patents,” SVERI’s College of Engineering, Pandharpur, 17–22 July 2023.</li>
+        <li>One‑week FDP “Hybrid Electric Vehicles,” GMR Institute of Technology & VR Siddhartha Engineering College, 21–25 Nov 2022.</li>
+        <li>FDP “ICT Tools for Teaching Learning Pedagogy,” GMR Institute of Technology & Sri Sairam Institute of Technology, 23–27 Aug 2022.</li>
+        <li>One‑week FDP “Advancements in Thermal and Renewable Energy Technologies (ATRET‑2022),” LBRCE, 4–9 July 2022.</li>
+        <li>One‑week online FDP “Progressive Trends in Mechanical Engineering and Allied Fields,” GH Raisoni College of Engineering, Nagpur, 28 June – 2 July 2022.</li>
+        <li>Two‑day national‑level workshop “NAAC Accreditation System with Effective DVV Process,” IQAC, GH Raisoni College of Engineering, 13–14 May 2022.</li>
+        <li>Five‑day online FDP “Revisiting CFD – OpenFOAM, COMSOL, LBM, and MATLAB,” PDEU & GMR Institute of Technology, 21–25 Feb 2022.</li>
+        <li>Five‑day online FDP “Polymer Matrix‑Based Nanostructures for Targeted Drug Delivery Application,” CIPET: CSTS Guwahati, 7–11 Feb 2022.</li>
+        <li>40‑hour online FDP “Machine Learning and Data Science for Engineering Applications,” NIT Warangal & MLRIT, 23 Aug – 2 Sept 2021.</li>
+        <li>AICTE‑sponsored one‑week STTP “Innovation and Researches in IoT Applications for Smart Manufacturing & Smart Design,” Sri Ramakrishna Engineering College, 9–14 Dec 2019.</li>
+        <li>AICTE‑sponsored two‑week FDP “Precision Engineering and Machining Processes,” Anurag Group of Institutions, 14–27 Nov 2019.</li>
+        <li>One‑week FDP “Development & Applications of Nanocomposite Materials,” Institute of Aeronautical Engineering, 9–14 July 2018.</li>
+        <li>Two‑week FDP “Current Trends in Materials and Manufacturing,” CMR College of Engineering and Technology, 15–27 May 2017.</li>
+        <li>Symposium “Finite Element Analysis” (SoFEA‑2017), VIT Vellore, 24–26 Mar 2017.</li>
+        <li>Three‑day workshop “Advances in Research and Innovations in Mechanical Engineering (ARIME‑2017),” Muffakham Jah College of Engineering, 30 Jan – 1 Feb 2017.</li>
+        <li>Six‑day FDP “Hyper‑Works & Computational Fluid Dynamics,” St. Martin’s Engineering College, 5–10 Dec 2016.</li>
+        <li>Two‑day workshop “Trends in Mechanical Engineering,” VJIT, 22–23 Feb 2016.</li>
+        <li>Two‑day STTP “Effective Teaching,” Cambridge Institute of Technology, Ranchi, 4–5 Oct 2015.</li>
+        <li>One‑day workshop “Industrial Tribology,” Anurag Group of Institutions, 31 Oct 2015.</li>
+        <li>Two‑day workshop “Finite Element Analysis,” MREC(A), 11–12 Mar 2015.</li>
+        <li>Two‑day workshop “Engineering Drawing,” MREC(A), 12–13 Sept 2014.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MEMBERSHIPS -->
+  <div id="Memberships" class="tabcontent">
+    <h3 class="section-title">Professional Society Memberships</h3>
+
+    <div class="item">
+      <ul>
+        <li>Certified Scrum Master – Scrum Alliance.</li>
+        <li>Life Member – Indian Society for Technical Education (ISTE).</li>
+        <li>Member – Society of Automotive Engineers (SAE).</li>
+        <li>Member – International Association of Engineers (MIAEng).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PERSONAL -->
+  <div id="Personal" class="tabcontent">
+    <h3 class="section-title">Personal Details</h3>
+
+    <div class="two-column">
+      <div class="item">
+        <ul>
+          <li><span class="label">Name:</span> Peyyala Pramod Kumar</li>
+          <li><span class="label">Father’s Name:</span> P. Bala Sundaram</li>
+          <li><span class="label">Date of Birth:</span> 15/12/1980</li>
+          <li><span class="label">Marital Status:</span> Married</li>
+          <li><span class="label">Religion:</span> Christian</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-title">Addresses</div>
+        <ul>
+          <li><span class="label">Communication:</span> 103, Anjanadri Towers, Mallikarjuna Hills, Beeramguda, Ameenpur, Hyderabad, 502032.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Declaration</div>
+      <p style="margin-top:4px;">
+        The information provided above is true to the best of my knowledge and belief.
+      </p>
+      <p style="margin-top:8px;font-weight:600;">(Dr. P. Pramod Kumar)</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Open default tab
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
